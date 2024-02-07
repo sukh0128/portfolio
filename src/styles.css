@@ -31,6 +31,12 @@ section.min-height {
 
 section.padding {
   padding: 5rem 0;
+  background-color: black;
+  /* color:black; */
+}
+
+.section-border {
+  border-bottom: 5px solid white;
 }
 
 section img.background {
@@ -53,6 +59,10 @@ h1 {
   margin: 0;
 }
 
+.white {
+  color: #f5f5f5;
+}
+
 h2 {
   font-size: 2rem;
   font-weight: 400;
@@ -71,14 +81,17 @@ p {
   line-height: 1.5;
   margin-bottom: 0;
   font-weight: 300;
+  color: white;
 }
 
 p.large {
   font-size: 24px;
+  color: white;
 }
 
 p.small {
   font-size: 15px;
+  color: white;
 }
 
 hr {
@@ -94,12 +107,12 @@ li::marker {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 a:hover {
-  color: #4e567e;
+  color: rgba(188, 2, 245, 0.815);
 }
 
 .container {
