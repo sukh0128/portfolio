@@ -1,7 +1,7 @@
 import React from "react";
-import arrowSvg from "../images/down-arrow.svg";
+import arrowSvg from "/public/images/down-arrow.svg";
 import PropTypes from "prop-types";
-import image from "../images/Eric.jpg";
+import image from "/public/images/Eric.jpg";
 
 const imageAltText = "Adult Man standing in front of a skyline at night.";
 
