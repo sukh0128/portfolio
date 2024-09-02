@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import ProjectModal from "./ProjectModal";
-import EricImage from '../../public/images/Eric.jpg';
-import PrisonScapeImage from '../../public/images/projects/PrisonScape 2.png';
+import PrisonScapeImage1 from '../../public/images/projects/PrisonScape 1.png';
+import PrisonScapeImage2 from '../../public/images/projects/PrisonScape 2.png';
 
 const projectList = [
   {
@@ -11,8 +11,8 @@ const projectList = [
     detailedDescription:
       "This project was a FPS and endless runner game made in Unity Engine using C#. For this project, I have learned a lot about Unity and C# generally with the Unity specific libraries for game development. I wrote unit tests, created the enemy basic in-game AI, various Unity artifacts used for the game and game related in-world Physics.",
     screenshots: [
-      EricImage,
-      PrisonScapeImage
+      PrisonScapeImage1,
+      PrisonScapeImage2
     ],
     links: {
       github: "https://github.com/PrisonScape-Game/PrisonScape",
@@ -125,12 +125,14 @@ const Portfolio = () => {
       <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
         <div className="container">
           {projectList.map((project) => (
-            <div className="box" key={project.title}>
-              <a href={project.links} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
-              </a>
-              <p className="small">{project.description}</p>
-              <button style={{color: "black"}} onClick={() => openModal(project)}>View Details</button>
+            <div className="box" key={project.title} style={{display:"flex", flexDirection: "column", justifyContent: "space-between", height:"90%", padding:"1rem"}}>
+              <div>
+                <a href={project.links} target="_blank" rel="noopener noreferrer">
+                  <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
+                </a>
+                <p className="small">{project.description}</p>
+              </div>
+              <button style={{color: "black", marginTop:"auto"}} onClick={() => openModal(project)}>View Details</button>
             </div>
           ))}
           {selectedProject && (

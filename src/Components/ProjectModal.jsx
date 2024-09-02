@@ -27,6 +27,7 @@ const ProjectModal = ({ isOpen, onRequestClose, project }) => {
         <p>{project.detailedDescription}</p>
       </div>
       <div>
+        <br></br>
         <h3>Links:</h3>
         <ul>
           {project.links.github && (
@@ -41,17 +42,19 @@ const ProjectModal = ({ isOpen, onRequestClose, project }) => {
             </div>
             <div>
                 <h3>Screenshots:</h3>
+                <br></br>
                 <div>
                     {project.screenshots.map((screenshot, index) => (
                         <img
                             key={index}
                             src={screenshot}
                             alt={`Screenshot ${index + 1}`}
-                            style={{ width: "300px", height: "auto" }}
+                            style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
                     ))}
                 </div>
             </div>
+            <br></br>
             <button onClick={onRequestClose}>Close</button>
         </Modal>
     );
