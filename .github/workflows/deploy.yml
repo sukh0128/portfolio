@@ -28,7 +28,7 @@ jobs:
     - name: Configure Git
       run: |
         git config --global user.email "erdenesukh@gmail.com"
-        git config --global user.name "Erdenesukh Tsendjav"
+        git config --global user.name "sukh0128"
 
     - name: Deploy to GitHub Pages
       run: npm run deploy
