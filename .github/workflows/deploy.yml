@@ -24,6 +24,11 @@ jobs:
 
     - name: Build the React app
       run: npm run build
+    
+    - name: Configure Git
+      run: |
+        git config --global user.email "erdenesukh@gmail.com"
+        git config --global user.name "Erdenesukh Tsendjav"
 
     - name: Deploy to GitHub Pages
       run: npm run deploy
