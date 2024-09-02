@@ -28,4 +28,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist  # Replace with the directory where your static files are generated
+        publish_dir: ../dist  # Replace with the directory where your static files are generated
