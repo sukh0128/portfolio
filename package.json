@@ -8,7 +8,7 @@
     "start": "parcel",
     "build": "parcel build",
     "build-gh": "parcel build --public-url 'https://sukh0128.github.io/portfolio'",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build-gh",
     "deploy": "gh-pages -d dist"
   },
   "repository": {

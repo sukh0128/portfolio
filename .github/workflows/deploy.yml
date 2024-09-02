@@ -26,7 +26,10 @@ jobs:
       run: npm install -g gh-pages
 
     - name: Build the React app
-      run: npm run build
+      run: npm run build-gh
+    
+    - name: Create .nojekyll
+      run: echo "" > ./dist/.nojekyll
     
     - name: Configure Git
       run: |
