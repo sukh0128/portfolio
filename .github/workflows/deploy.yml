@@ -31,7 +31,9 @@ jobs:
         git config --global user.name "sukh0128"
 
     - name: Deploy to GitHub Pages
-      run: npm run deploy
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: gh-pages -d dist -r "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
 
     - name: Clean up gh-pages
       run: git worktree prune
