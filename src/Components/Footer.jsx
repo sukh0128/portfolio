@@ -9,10 +9,10 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import devDotToIcon from "../images/socials/devdotto.svg";
-import envelopeIcon from "../images/socials/envelope.svg";
-import gitHubIcon from "../images/socials/github.svg";
-import linkedInIcon from "../images/socials/linkedin.svg";
+import devDotToIcon from "../../public/images/socials/devdotto.svg";
+import envelopeIcon from "../../public/images/socials/envelope.svg";
+import gitHubIcon from "../../public/images/socials/github.svg";
+import linkedInIcon from "../../public/images/socials/linkedin.svg";
 
 const Footer = (props) => {
   const { devDotTo, email, gitHub, linkedIn, name, primaryColor } = props;

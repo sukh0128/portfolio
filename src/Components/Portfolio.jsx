@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import ProjectModal from "./ProjectModal";
-import EricImage from '/public/images/Eric.jpg';
-import PrisonScapeImage from '/public/images/projects/PrisonScape 2.png';
+import EricImage from '../../public/images/Eric.jpg';
+import PrisonScapeImage from '../../public/images/projects/PrisonScape 2.png';
 
 const projectList = [
   {
