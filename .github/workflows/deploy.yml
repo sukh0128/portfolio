@@ -22,6 +22,9 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Install gh-pages
+      run: npm install -g gh-pages
+
     - name: Build the React app
       run: npm run build
     
