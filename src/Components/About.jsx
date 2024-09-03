@@ -10,13 +10,13 @@ const description = `I am an experienced Mid-Level Software Engineer who has a M
   I am obsessed with solving problems and figuring out the how and more imporantly, the why!`;
 
 const skillsList = [
-  "API development",
+  "Problem Solving",
   "Database design",
+  "API development",
   "Back-end development",
   "Front-end development",
-  "Design Patterns and Architecture",
   "Algorithms and Optimization",
-  "Problem Solving",
+  "Design Patterns and Architecture",
   "Communication and growth facilitator",
 ];
 
@@ -25,35 +25,17 @@ const detailOrQuote = "The impediment to action advances action. What stands in 
 const About = () => {
   return (
     <section className="padding" id="about">
-      {/* <img className="background" src={image} alt={imageAltText} /> */}
-      <div
-        style={{
-          backgroundColor: "black",
-          width: "50%",
-          padding: "4rem",
-          margin: "3rem auto",
-          textAlign: "center",
-          color: "white",
-        }}
-      >
+      <div className="about-container">
         <h2>About Myself</h2>
-        <p className="large">{description}</p>
+        <p className="large description">{description}</p>
         <hr />
-        <ul
-          style={{
-            textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
-          }}
-        >
+        <ul className="skillsList">
           {skillsList.map((skill) => (
             <li key={skill}>{skill}</li>
           ))}
         </ul>
         <hr />
-        <p style={{ padding: "1rem 3rem 0", whiteSpace: "pre-line" }}>{detailOrQuote}</p>
+        <p className="detailOrQuote">{detailOrQuote}</p>
       </div>
       <div className="section-border"></div>
     </section>

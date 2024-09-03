@@ -121,35 +121,30 @@ const Portfolio = () => {
 
   return (
     <section className="padding" id="portfolio">
-      <h2 style={{ textAlign: "center", color: "white"}}>Portfolio</h2>
-      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
+      <h2 style={{ textAlign: "center", color: "white" }}>Portfolio</h2>
+      <div className="portfolio-container">
         <div className="container">
           {projectList.map((project) => (
-            <div className="box" key={project.title} style={{display:"flex", flexDirection: "column", justifyContent: "space-between", height:"90%", padding:"1rem"}}>
+            <div className="box" key={project.title}>
               <div>
                 <a href={project.links} target="_blank" rel="noopener noreferrer">
-                  <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
+                  <h3>{project.title}</h3>
                 </a>
                 <p className="small">{project.description}</p>
               </div>
-              <button style={{color: "black", marginTop:"auto"}} onClick={() => openModal(project)}>View Details</button>
+              <button onClick={() => openModal(project)}>View Details</button>
             </div>
           ))}
           {selectedProject && (
             <ProjectModal
-            isOpen={modalIsOpen}
-            onRequestClose={closeModal}
-            project={selectedProject}
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+              project={selectedProject}
             />
           )}
+        <br></br>
         </div>
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <div className="section-border"></div>
     </section>
   );
