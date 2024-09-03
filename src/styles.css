@@ -262,7 +262,7 @@ img.socialIcon {
 @media only screen and (max-width: 580px) {
   /* Adjust the background image position to the left */
   section img.background {
-    left: -110%; /* Move the image to the left edge */
+    left: -50%; /* Move the image to the left edge */
     transform: translateX(0); /* Remove the translation */
   }
 }
