@@ -31,13 +31,13 @@ const ProjectModal = ({ isOpen, onRequestClose, project }) => {
       <button
         onClick={onRequestClose}
         style={{
-          position: "absolute",
+          position: "fixed",
           top: "1rem",
           right: "1rem",
           backgroundColor: "transparent",
           border: "none",
           color: "white",
-          fontSize: "50px",
+          fontSize: "5rem",
           cursor: "pointer",
         }}
         aria-label="Close"

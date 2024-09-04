@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import ProjectModal from "./ProjectModal";
 import PrisonScapeImage1 from '../../public/images/projects/PrisonScape 1.png';
 import PrisonScapeImage2 from '../../public/images/projects/PrisonScape 2.png';
+import TwodPlatformer1 from '../../public/images/projects/2dPlatformer1.png';
+import TwodPlatformer2 from '../../public/images/projects/2dPlatformer2.png';
+import TwodPlatformer3 from '../../public/images/projects/2dPlatformer3.png';
+
 
 const projectList = [
   {
@@ -24,13 +28,15 @@ const projectList = [
     description:
       "Worked with a team to create a 2D platformer game using Unity and C#. We used many different design patterns to make the game more efficient and scalable.",
     detailedDescription:
-      "",
+      "This project was a 2d platformer game where me and teammates had to use specific design patterns such as Memento, Singleton, Observer, and various others for our in-game functionalities and objects. I have learned so much regarding design patterns and making playable unity games in C#. I have also studied additional design patterns such as Factory and Abstact Factory as part of this project.",
     screenshots: [
-
+      TwodPlatformer1,
+      TwodPlatformer2,
+      TwodPlatformer3
     ],
     links: {
-      github: "",
-      youtube: ""
+      github: "https://github.com/414-514-game/2D-Movement",
+      youtube: "https://studio.youtube.com/video/dn0sWoTs7iM/edit"
     }
   },
   {
