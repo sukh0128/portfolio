@@ -236,6 +236,8 @@ img.socialIcon {
 .box button {
   color: black;
   margin-top: auto;
+  align-self: flex-end;
+  width: 100%;
 }
 
 @media only screen and (max-width: 580px) {

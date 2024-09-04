@@ -127,9 +127,9 @@ const Portfolio = () => {
           {projectList.map((project) => (
             <div className="box" key={project.title}>
               <div>
-                <a href={project.links} target="_blank" rel="noopener noreferrer">
+                <div style={{color:"white"}}> 
                   <h3>{project.title}</h3>
-                </a>
+                </div>
                 <p className="small">{project.description}</p>
               </div>
               <button onClick={() => openModal(project)}>View Details</button>
