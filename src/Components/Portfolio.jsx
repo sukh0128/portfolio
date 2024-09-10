@@ -105,7 +105,7 @@ const projectList = [
       ML4
     ],
     links: {
-      github: "https://github.com/sukh0128/CIS602-Final-Project"
+      github: ""
     }  
   },
   {
