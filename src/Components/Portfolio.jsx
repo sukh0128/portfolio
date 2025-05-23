@@ -25,6 +25,8 @@ import ML1 from '../../public/images/projects/ML1.png';
 import ML2 from '../../public/images/projects/ML2.png';
 import ML3 from '../../public/images/projects/ML3.png';
 import ML4 from '../../public/images/projects/ML4.png';
+import HTTP1 from '../../public/images/projects/HTTP1.png'; 
+import HTTP2 from '../../public/images/projects/HTTP2.png';
 
 const projectList = [
   {
@@ -138,6 +140,20 @@ const projectList = [
     links: {
       github: "https://github.com/sukh0128/chatMNG"
     }  
+  },
+  {
+    title: "Python HTTP/1.1 Server",
+    description:
+      "Using the Code Crafers' HTTP/1.1 Server challenge, created a simple HTTP/1.1 server using Python. The project is important to demonstrate the understanding of the HTTP protocol and how it works.",
+    detailedDescription:
+      "Furthermore this project and challenge helpful to refine my python specific skills and understanding of the HTTP protocol and how it works. It also proved helpful in testing multi threaded application and servers.",
+    screenshots: [
+      HTTP1,
+      HTTP2
+    ],
+    links: {
+      github: "https://github.com/sukh0128/CodeCrafters-HTTP-Server-Python"
+    }
   },
 ];
 
