@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
+
+/* About component specific styles with high specificity */
+.section-border {
+  border-bottom: 5px solid white;
+}
+section.about-section {
+  position: relative !important;
+  width: 100vw !important;
+  padding: 5rem 0 !important;
+  background-color: black !important;
+  font-family: "Montserrat", sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+section.about-section .about-section-border {
+  border-bottom: 5px solid white !important;
+}
+
+section.about-section .about-container {
+  background-color: black !important;
+  width: 50% !important;
+  padding: 4rem !important;
+  margin: 3rem auto !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+section.about-section .about-container h2 {
+  font-size: 2rem !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+  padding-top: 1rem !important;
+  color: #ffffff !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+section.about-section .about-container p {
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+  margin-bottom: 0 !important;
+  font-weight: 300 !important;
+  color: #ffffff !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+section.about-section .about-container p.large {
+  font-size: 24px !important;
+  color: #ffffff !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+section.about-section .about-container hr {
+  margin: 2.5rem !important;
+  border-color: #ffffff !important;
+}
+
+section.about-section .description, 
+section.about-section .detailOrQuote {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1.5rem !important;
+  font-family: "Montserrat", sans-serif !important;
+  color: #ffffff !important;
+}
+
+section.about-section .skillsList {
+  text-align: left !important;
+  columns: 2 !important;
+  font-size: 1.25rem !important;
+  margin: 2rem 3rem !important;
+  gap: 3rem !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+section.about-section .skillsList > li {
+  text-align: left !important;
+  line-height: 1.7 !important;
+  color: #ffffff !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+section.about-section .skillsList > li::marker {
+  color: #4e567e !important;
+}
+
+@media only screen and (max-width: 768px) {
+  section.about-section .about-container {
+    width: 100% !important;
+    padding: 1.5rem !important;
+  }
+
+  section.about-section .description, 
+  section.about-section .detailOrQuote {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+
+  section.about-section .skillsList > li {
+    width: 90% !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  section.about-section .about-container {
+    padding: 1rem !important;
+  }
+
+  section.about-section .description, 
+  section.about-section .detailOrQuote {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    width: 95% !important;
+  }
+
+  section.about-section .skillsList {
+    text-align: left !important;
+    columns: 1 !important;
+    font-size: 1.25rem !important;
+    margin: 2rem 3rem !important;
+    gap: 3rem !important;
+  }
+
+  section.about-section .skillsList > li {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+} 

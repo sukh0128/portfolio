@@ -1,0 +1,270 @@
+/**
+* CSS file to hold styles that apply across the application
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+div#main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+}
+
+section.min-height {
+  min-height: 100vh;
+}
+
+section.padding {
+  padding: 5rem 0;
+  background-color: black;
+  /* color:black; */
+}
+
+.section-border {
+  border-bottom: 5px solid white;
+}
+
+section img.background {
+  height: 100%;
+  left: 50%;
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 0);
+  width: 100vmax;
+  z-index: -1;
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 7rem;
+  font-weight: 400;
+  line-height: 0.8;
+  margin: 0;
+}
+
+.white {
+  color: #f5f5f5;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  font-weight: 300;
+  color: white;
+}
+
+p.large {
+  font-size: 24px;
+  color: white;
+}
+
+p.small {
+  font-size: 15px;
+  color: white;
+}
+
+hr {
+  margin: 2.5rem;
+}
+
+li {
+  line-height: 1.7;
+}
+
+li::marker {
+  color: #4e567e;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(188, 2, 245, 0.815);
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 330px 300px;
+  margin: 20px auto;
+}
+
+.container .box {
+  border-radius: 10px;
+  border: 1px solid rgb(204, 204, 204);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+img.socialIcon {
+  height: 30px;
+  width: 30px;
+}
+
+.about-container {
+  background-color: black;
+  width: 50%; /* Start with a higher width that scales down */
+  padding: 4rem;
+  margin: 3rem auto;
+  text-align: center;
+  color: white;
+}
+
+.description, .detailOrQuote {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.skillsList {
+  text-align: left;
+  columns: 2;
+  font-size: 1.25rem;
+  margin: 2rem 3rem;
+  gap: 3rem;
+}
+
+.skillsList > li {
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-container {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .description, .detailOrQuote {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .skillsList > li {
+    width: 90%; /* Makes each item in the skills list take up more space */
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .about-container {
+    padding: 1rem;
+  }
+
+  .description, .detailOrQuote {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    width:95%;
+  }
+
+  .skillsList {
+    text-align: left;
+    columns: 1;
+    font-size: 1.25rem;
+    margin: 2rem 3rem;
+    gap: 3rem;
+  }
+
+  .skillsList > li {
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: center;
+    width: 100%; /* Full width on very small screens */
+  }
+}
+
+/* Container for the portfolio section */
+.portfolio-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 330px 300px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction:  row;
+  padding-top:  3rem;
+}
+
+/* Individual project box styling */
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  padding: 1rem;
+}
+
+/* Ensure h3 and p elements inside box have the correct spacing */
+.box h3 {
+  flex-basis: 40px;
+}
+
+.box button {
+  color: black;
+  margin-top: auto;
+  align-self: flex-end;
+  width: 100%;
+}
+
+@media only screen and (max-width: 580px) {
+  .container {
+    display: table-row;
+    margin: auto;
+    width: 90%;
+  }
+  /* Stack project boxes vertically in mobile view */
+  .portfolio-container {
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center; /* Center them horizontally */
+    padding-top: 2rem;
+  }
+
+  /* Ensure the box takes the full width in mobile view */
+  .container .box {
+    width: 90%; /* Adjust as needed for padding or margin */
+    margin-bottom: 20px; /* Add some space between the boxes */
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  /* Adjust the background image position to the left */
+  section img.background {
+    left: -50%; /* Move the image to the left edge */
+    transform: translateX(0); /* Remove the translation */
+  }
+}
