@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 html, body {
   overflow-x: hidden;
@@ -35,12 +33,17 @@ html, body {
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --hubspot: #ff5c34;
-  --dark: #141412;
-  --secondary: #4d4d4a;
-  --accent: #30302e;
-  --font-serif: system-ui;
-  --font-sans: system-ui;
+}
+
+@theme inline {
+  --color-hubspot: var(--hubspot);
+  --color-dark: var(--dark);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-serif: var(--font-neuton);
+  --font-sans: var(--font-noto-sans);
 }
 
 @media (prefers-color-scheme: light) {
