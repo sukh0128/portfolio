@@ -22,7 +22,7 @@ const Messagebar = () => {
   const getResponse = async () => {
     try {
       const apiUrl = process.env.NODE_ENV === 'production' 
-        ? 'https://portfolio-1pdn6w25a-eric-tsendjavs-projects.vercel.app/api/chat'
+        ? 'https://portfolio-2r9798fd5-eric-tsendjavs-projects.vercel.app/api/chat'
         : '/api/chat';
         
       const response = await fetch(apiUrl, {
