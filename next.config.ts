@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'AIme'; // Replace with your GitHub repository name
+const repoName = 'portfolio'; // Replace with your GitHub repository name
 
 const nextConfig: NextConfig = {
   /* config options here */

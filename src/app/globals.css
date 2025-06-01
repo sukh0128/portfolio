@@ -54,7 +54,7 @@ html, body {
     --accent: rgb(207, 192, 178);
     --background: #f3e7dc;
     --foreground: #3a3a3a;
-    --bg-image: url('/bglight.svg');
+    --bg-image: url('/portfolio/bglight.svg');
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -65,7 +65,7 @@ html, body {
     --accent: #30302e;
     --background: #262625;
     --foreground: #fefefe;
-    --bg-image: url('/bg.svg');
+    --bg-image: url('/portfolio/bg.svg');
   }
 }
 
