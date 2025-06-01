@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { AnimatePresence, motion } from "motion/react";
 import {
   FaGithub,
@@ -19,20 +20,25 @@ const Messagebar = () => {
   const { trackChatMessage } = useAnalytics();
 
   const getResponse = async () => {
-    // For static deployment, return a default response since API routes aren't available
-    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
-      return "Thanks for your question! This is a static deployment, so the AI chat isn't available right now. Please reach out to me directly via email or LinkedIn for any questions!";
-    }
-    
     try {
-      const response = await fetch("/api/chat", {
+      const apiUrl = process.env.NODE_ENV === 'production' 
+        ? 'https://portfolio-1pdn6w25a-eric-tsendjavs-projects.vercel.app/api/chat'
+        : '/api/chat';
+        
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: currMsg }),
       });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
       const data = await response.json();
       return data.answer;
-    } catch {
+    } catch (error) {
+      console.error('API Error:', error);
       return "Sorry, I'm having trouble responding right now. Please try again later or contact me directly!";
     }
   };

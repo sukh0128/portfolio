@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from 'react';
+import React from 'react';
 import Script from 'next/script';
 
 declare global {
@@ -15,24 +15,6 @@ interface GoogleAnalyticsProps {
 }
 
 const GoogleAnalytics = ({ gaId }: GoogleAnalyticsProps) => {
-  useEffect(() => {
-    // Initialize gtag
-    if (typeof window !== 'undefined') {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(command: string, targetId: string, config?: Record<string, unknown>) {
-        window.dataLayer.push([command, targetId, config]);
-      }
-      gtag('js', new Date().toString());
-      gtag('config', gaId, {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-      
-      // Make gtag globally available
-      window.gtag = gtag;
-    }
-  }, [gaId]);
-
   return (
     <>
       <Script
