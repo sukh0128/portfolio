@@ -29,6 +29,8 @@ export default function Home() {
               scrollbarWidth: 'thin',
               scrollbarColor: '#4a5568 #2d3748',
               WebkitOverflowScrolling: 'touch',
+              scrollBehavior: 'smooth',
+              overscrollBehavior: 'contain',
             }}
           >
             <Chatbox />

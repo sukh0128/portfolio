@@ -19,16 +19,20 @@ const Chatbox = () => {
   const bottomRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToBottom = () => {
-    bottomRef.current?.scrollIntoView({ 
-      behavior: "smooth",
-      block: "nearest",
-      inline: "nearest"
-    });
+    setTimeout(() => {
+      bottomRef.current?.scrollIntoView({ 
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest"
+      });
+    }, 100);
   };
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages, currSection, showResponse]);
+    if (messages.length > 0) {
+      scrollToBottom();
+    }
+  }, [messages]);
 
   useEffect(() => {
     const waitBeforeChat = setTimeout(() => setCurrSection(0), 2500);
@@ -63,7 +67,6 @@ const Chatbox = () => {
                       )
                       .start()
                       .callFunction(() => {
-                        scrollToBottom();
                         setCurrSection(currSection + 1);
                       });
                   }}
@@ -114,7 +117,6 @@ const Chatbox = () => {
                       .start()
                       .callFunction(() => {
                         setCurrSection(currSection + 1);
-                        scrollToBottom();
                       });
                   }}
                   options={{
@@ -151,7 +153,6 @@ const Chatbox = () => {
                       )
                       .start()
                       .callFunction(() => {
-                        scrollToBottom();
                         setCurrSection(currSection + 1);
                       });
                   }}
@@ -172,7 +173,6 @@ const Chatbox = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               onAnimationComplete={() => {
-                scrollToBottom();
                 setShowResponse(showResponse + 1);
               }}
             >
@@ -189,7 +189,6 @@ const Chatbox = () => {
                       )
                       .start()
                       .callFunction(() => {
-                        scrollToBottom();
                         setCurrSection(currSection + 1);
                       });
                   }}
@@ -211,7 +210,6 @@ const Chatbox = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               onAnimationComplete={() => {
-                scrollToBottom();
                 setShowResponse(showResponse + 1);
               }}
             >
@@ -224,10 +222,8 @@ const Chatbox = () => {
                   onInit={(typewriter) => {
                     typewriter
                       .typeString("sure, fire away below :) ")
-
                       .start()
                       .callFunction(() => {
-                        scrollToBottom();
                         setCurrSection(currSection + 1);
                       });
                   }}

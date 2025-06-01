@@ -61,17 +61,17 @@ const Footer = (props: FooterProps) => {
       <div style={socialContainerStyle}>
         {email && (
           <a href={`mailto:${email}`} style={linkStyle}>
-            <img src={"/socials/envelope.svg"} alt="email" style={socialIconStyle} />
+            <img src={"/portfolio/socials/envelope.svg"} alt="email" style={socialIconStyle} />
           </a>
         )}
         {devDotTo && (
-          <a href={`https://dev.to/${"/socials/devdotto.svg"}`} target="_blank" rel="noopener noreferrer" style={linkStyle}>
-            <img src={"/socials/devdotto.svg"} alt="Dev.to" style={socialIconStyle} />
+          <a href={`https://dev.to/${"/portfolio/socials/devdotto.svg"}`} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+            <img src={"/portfolio/socials/devdotto.svg"} alt="Dev.to" style={socialIconStyle} />
           </a>
         )}
         {gitHub && (
           <a href={`https://github.com/${gitHub}`} target="_blank" rel="noopener noreferrer" style={linkStyle}>
-            <img src={"/socials/github.svg"} alt="GitHub" style={socialIconStyle} />
+            <img src={"/portfolio/socials/github.svg"} alt="GitHub" style={socialIconStyle} />
           </a>
         )}
         {linkedIn && (
@@ -81,7 +81,7 @@ const Footer = (props: FooterProps) => {
             rel="noopener noreferrer"
             style={linkStyle}
           >
-            <img src={"/socials/linkedin.svg"} alt="LinkedIn" style={socialIconStyle} />
+            <img src={"/portfolio/socials/linkedin.svg"} alt="LinkedIn" style={socialIconStyle} />
           </a>
         )}
       </div>
