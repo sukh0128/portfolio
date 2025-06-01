@@ -6,7 +6,23 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'hubspot': 'var(--hubspot)',
+        'dark': 'var(--dark)',
+        'secondary': 'var(--secondary)',
+        'accent': 'var(--accent)',
+        'background': 'var(--background)',
+        'foreground': 'var(--foreground)',
+      },
+      fontFamily: {
+        'serif': 'var(--font-serif)',
+        'sans': 'var(--font-sans)',
+      },
+      borderWidth: {
+        '1': '1px',
+      }
+    },
   },
   plugins: [],
 } 

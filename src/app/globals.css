@@ -35,10 +35,10 @@ html, body {
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-hubspot: #ff5c34;
-  --color-dark: #fbf0e6;
-  --color-secondary: rgb(207, 192, 178);
-  --color-accent: rgb(207, 192, 178);
+  --hubspot: #ff5c34;
+  --dark: #141412;
+  --secondary: #4d4d4a;
+  --accent: #30302e;
   --font-serif: system-ui;
   --font-sans: system-ui;
 }
