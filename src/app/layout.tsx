@@ -77,7 +77,7 @@ export default function RootLayout({
             <Header />
           </section>
         </div>
-        <div className="h-screen" style={{ backgroundImage: "url('/Eric.jpg')", backgroundSize: "cover", backgroundPosition: "top right" }}>
+        <div className="h-screen" style={{ backgroundImage: "url('/portfolio/Eric.jpg')", backgroundSize: "cover", backgroundPosition: "top right" }}>
           <section id="header" className="h-full max-w-screen-sm mx-auto flex justify-center items-center">
             {children}
             <Analytics />

@@ -13,8 +13,8 @@ const projectList = [
     detailedDescription:
       "This project was a FPS and endless runner game made in Unity Engine using C#. For this project, I have learned a lot about Unity and C# generally with the Unity specific libraries for game development. I wrote unit tests, created the enemy basic in-game AI, various Unity artifacts used for the game and game related in-world Physics.",
     screenshots: [
-      "/projects/PrisonScape 1.png",
-      "/projects/PrisonScape 2.png"
+      "/portfolio/projects/PrisonScape 1.png",
+      "/portfolio/projects/PrisonScape 2.png"
     ],
     links: {
       github: "https://github.com/PrisonScape-Game/PrisonScape",
@@ -28,9 +28,9 @@ const projectList = [
     detailedDescription:
       "This project was a 2d platformer game where me and teammates had to use specific design patterns such as Memento, Singleton, Observer, and various others for our in-game functionalities and objects. I have learned so much regarding design patterns and making playable unity games in C#. I have also studied additional design patterns such as Factory and Abstact Factory as part of this project.",
     screenshots: [
-      "/projects/2dPlatformer1.png",
-      "/projects/2dPlatformer2.png",
-      "/projects/2dPlatformer3.png"
+      "/portfolio/projects/2dPlatformer1.png",
+      "/portfolio/projects/2dPlatformer2.png",
+      "/portfolio/projects/2dPlatformer3.png"
     ],
     links: {
       github: "https://github.com/414-514-game/2D-Movement",
@@ -43,9 +43,9 @@ const projectList = [
     detailedDescription:
       "A very basic MVC application that uses .NET Core and Razor pages to calculate your mortgage. The application is important to demonstrate the use of .NET Core and Razor pages in a web application. The application also has a docker component to it, where you can share the docker image using docker commands",
     screenshots: [
-      "/projects/Mortgage 1.png",
-      "/projects/Mortgage 2.png",
-      "/projects/Mortgage 3.png"
+      "/portfolio/projects/Mortgage 1.png",
+      "/portfolio/projects/Mortgage 2.png",
+      "/portfolio/projects/Mortgage 3.png"
     ],
     links: {
       github: "https://github.com/sukh0128/MortGauge",
@@ -59,12 +59,12 @@ const projectList = [
     detailedDescription:
       "The project was to simulate a real life big data cluster using Apache Hadoop and Spark that would be designed for an online retailer system with data centers and servers distributed across multiple cities in different geological locations, such as New York and Tokyo.",
     screenshots: [
-      "/projects/hadoop1.png",
-      "/projects/hadoop2.png",
-      "/projects/spark1.png",
-      "/projects/spark2.png",
-      "/projects/spark3.png",
-      "/projects/design.png"
+      "/portfolio/projects/hadoop1.png",
+      "/portfolio/projects/hadoop2.png",
+      "/portfolio/projects/spark1.png",
+      "/portfolio/projects/spark2.png",
+      "/portfolio/projects/spark3.png",
+      "/portfolio/projects/design.png"
     ],
     links: {
       github: "",
@@ -78,10 +78,10 @@ const projectList = [
     detailedDescription:
       "The app is a simple flask python app that does the bare minimum, but the main focus of the project was to demonstrate the deployment of a machine learning model using Docker and Kubernetes which serves 3 replicas of the container to account for high availability. The project is important to demonstrate the integration of containerization and orchestration with Machine Learning models.",
     screenshots: [
-      "/projects/ML1.png",
-      "/projects/ML2.png",
-      "/projects/ML3.png",
-      "/projects/ML4.png"
+      "/portfolio/projects/ML1.png",
+      "/portfolio/projects/ML2.png",
+      "/portfolio/projects/ML3.png",
+      "/portfolio/projects/ML4.png"
     ],
     links: {
       github: "https://github.com/sukh0128/CIS602-Final-Project"
@@ -94,9 +94,9 @@ const projectList = [
     detailedDescription:
     "A full stack application that uses .NET Core back-end project and React front-end project to plan for your retirement. Imporant project to demonstrate the integrating separate back-end and front-end projects.",
     screenshots: [
-      "/projects/retirement1.png",
-      "/projects/retirement2.png",
-      "/projects/retirement3.png"
+      "/portfolio/projects/retirement1.png",
+      "/portfolio/projects/retirement2.png",
+      "/portfolio/projects/retirement3.png"
     ], 
     links: {
       github: "https://github.com/sukh0128/RetireEarly"
@@ -109,10 +109,10 @@ const projectList = [
     detailedDescription:
       "A full stack application that uses .NET Core back-end project and React front-end project to demonstrate a real-time chat application. The project is important to demonstrate integrating different APIs such as GoogleTranslate and OpenAI in your application.",
     screenshots: [
-      "/projects/chatmng1.png",
-      "/projects/chatmng2.png",
-      "/projects/chatmng3.png",
-      "/projects/chatmng4.png"
+      "/portfolio/projects/chatmng1.png",
+      "/portfolio/projects/chatmng2.png",
+      "/portfolio/projects/chatmng3.png",
+      "/portfolio/projects/chatmng4.png"
     ],    
     links: {
       github: "https://github.com/sukh0128/chatMNG"
@@ -125,8 +125,8 @@ const projectList = [
     detailedDescription:
       "Furthermore this project and challenge helpful to refine my python specific skills and understanding of the HTTP protocol and how it works. It also proved helpful in testing multi threaded application and servers.",
     screenshots: [
-      "/projects/HTTP1.png",
-      "/projects/HTTP2.png"
+      "/portfolio/projects/HTTP1.png",
+      "/portfolio/projects/HTTP2.png"
     ],
     links: {
       github: "https://github.com/sukh0128/CodeCrafters-HTTP-Server-Python"
