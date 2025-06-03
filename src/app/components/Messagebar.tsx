@@ -30,6 +30,7 @@ const Messagebar = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: currMsg }),
+        mode: "cors",
       });
       
       if (!response.ok) {
