@@ -242,33 +242,69 @@ const Portfolio = () => {
   };
 
   return (
-    <section style={sectionStyle} id="portfolio">
-      <div style={borderStyle}></div>
-      <h2 style={h2Style}>Portfolio</h2>
-      <div style={portfolioContainerStyle}>
-        <div style={containerStyle}>
-          {projectList.map((project) => (
-            <div style={boxStyle} key={project.title}>
-              <div>
+    <>
+      <style jsx>{`
+        @media only screen and (max-width: 580px) {
+          .container {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            margin: auto !important;
+            width: 90% !important;
+            grid-template-columns: none !important;
+          }
+          
+          /* Stack project boxes vertically in mobile view */
+          .portfolio-container {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            padding-top: 2rem !important;
+          }
+          
+          /* Ensure the box takes the full width in mobile view */
+          .container .box {
+            width: 90% !important;
+            margin-bottom: 20px !important;
+          }
+        }
+
+        @media only screen and (max-width: 580px) {
+          /* Adjust the background image position to the left */
+          section img.background {
+            left: -50% !important;
+            transform: translateX(0) !important;
+          }
+        }
+      `}</style>
+      <section style={sectionStyle} id="portfolio">
+        <div style={borderStyle}></div>
+        <h2 style={h2Style}>Portfolio</h2>
+        <div style={portfolioContainerStyle} className="portfolio-container">
+          <div style={containerStyle} className="container">
+            {projectList.map((project) => (
+              <div style={boxStyle} className="box" key={project.title}>
                 <div>
-                  <h3 style={h3Style}>{project.title}</h3>
+                  <div>
+                    <h3 style={h3Style}>{project.title}</h3>
+                  </div>
+                  <p style={pSmallStyle}>{project.description}</p>
                 </div>
-                <p style={pSmallStyle}>{project.description}</p>
+                <button style={buttonStyle} onClick={() => openModal(project)}>View Details</button>
               </div>
-              <button style={buttonStyle} onClick={() => openModal(project)}>View Details</button>
-            </div>
-          ))}
-          {selectedProject && (
-            <ProjectModal
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-              project={selectedProject}
-            />
-          )}
-        <br></br>
+            ))}
+            {selectedProject && (
+              <ProjectModal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                project={selectedProject}
+              />
+            )}
+          <br></br>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 const description = `I am an experienced Mid-Level Software Engineer who has a Masters Of Science degree in Information Technology. 
@@ -104,21 +106,71 @@ const About = () => {
   };
 
   return (
-    <section style={sectionStyle} id="about">
-      <div style={borderStyle}></div>
-      <h2 style={h2Style}>About Myself</h2>
-      <div style={containerStyle}>
-        <p style={largePStyle}>{description}</p>
-        <hr style={hrStyle} />
-        <ul style={skillsListStyle}>
-          {skillsList.map((skill) => (
-            <li key={skill} style={{ color: '#ffffff', fontFamily: '"Montserrat", sans-serif', lineHeight: 1.7 }}>{skill}</li>
-          ))}
-        </ul>
-        <hr style={hrStyle} />
-        <p style={pStyle}>{detailOrQuote}</p>
-      </div>
-    </section>
+    <>
+      <style jsx>{`
+        @media only screen and (max-width: 768px) {
+          .about-container {
+            width: 100% !important;
+            padding: 1.5rem !important;
+          }
+
+          .description, .detailOrQuote {
+            font-size: 0.9rem !important;
+            line-height: 1.5 !important;
+            text-align: center !important;
+          }
+
+          .skillsList > li {
+            width: 90% !important;
+            margin-bottom: 1rem !important;
+          }
+        }
+
+        @media only screen and (max-width: 580px) {
+          .about-container {
+            padding: 1rem !important;
+          }
+
+          .description, .detailOrQuote {
+            font-size: 0.8rem !important;
+            line-height: 1.4 !important;
+            width: 95% !important;
+            text-align: center !important;
+            margin: 0 auto !important;
+          }
+
+          .skillsList {
+            text-align: left !important;
+            columns: 1 !important;
+            font-size: 1.25rem !important;
+            margin: 2rem 3rem !important;
+            gap: 3rem !important;
+          }
+
+          .skillsList > li {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            width: 100% !important;
+          }
+        }
+      `}</style>
+      <section style={sectionStyle} id="about">
+        <div style={borderStyle}></div>
+        <h2 style={h2Style}>About Myself</h2>
+        <div style={containerStyle} className="about-container">
+          <p style={largePStyle} className="description">{description}</p>
+          <hr style={hrStyle} />
+          <ul style={skillsListStyle} className="skillsList">
+            {skillsList.map((skill) => (
+              <li key={skill} style={{ color: '#ffffff', fontFamily: '"Montserrat", sans-serif', lineHeight: 1.7 }}>{skill}</li>
+            ))}
+          </ul>
+          <hr style={hrStyle} />
+          <p style={pStyle} className="detailOrQuote">{detailOrQuote}</p>
+        </div>
+      </section>
+    </>
   );
 };
 
