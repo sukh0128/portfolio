@@ -34,6 +34,20 @@ const Chatbox = () => {
     }
   }, [messages]);
 
+  // Auto-scroll when new sections appear
+  useEffect(() => {
+    if (currSection >= 0) {
+      scrollToBottom();
+    }
+  }, [currSection]);
+
+  // Auto-scroll when responses appear
+  useEffect(() => {
+    if (showResponse > 0) {
+      scrollToBottom();
+    }
+  }, [showResponse]);
+
   useEffect(() => {
     const waitBeforeChat = setTimeout(() => setCurrSection(0), 2500);
     return () => clearTimeout(waitBeforeChat);
@@ -68,6 +82,7 @@ const Chatbox = () => {
                       .start()
                       .callFunction(() => {
                         setCurrSection(currSection + 1);
+                        scrollToBottom();
                       });
                   }}
                   options={{
@@ -117,6 +132,7 @@ const Chatbox = () => {
                       .start()
                       .callFunction(() => {
                         setCurrSection(currSection + 1);
+                        scrollToBottom();
                       });
                   }}
                   options={{
@@ -154,6 +170,7 @@ const Chatbox = () => {
                       .start()
                       .callFunction(() => {
                         setCurrSection(currSection + 1);
+                        scrollToBottom();
                       });
                   }}
                   options={{
@@ -190,6 +207,7 @@ const Chatbox = () => {
                       .start()
                       .callFunction(() => {
                         setCurrSection(currSection + 1);
+                        scrollToBottom();
                       });
                   }}
                   options={{
@@ -225,6 +243,7 @@ const Chatbox = () => {
                       .start()
                       .callFunction(() => {
                         setCurrSection(currSection + 1);
+                        scrollToBottom();
                       });
                   }}
                   options={{

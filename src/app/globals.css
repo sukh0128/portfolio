@@ -46,17 +46,6 @@ html, body {
   --font-sans: var(--font-noto-sans);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --hubspot: #ff5c34;
-    --dark: #fbf0e6;
-    --secondary: rgb(207, 192, 178);
-    --accent: rgb(207, 192, 178);
-    --background: #f3e7dc;
-    --foreground: #3a3a3a;
-    --bg-image: url('/portfolio/bglight.svg');
-  }
-}
 @media (prefers-color-scheme: dark) {
   :root {
     --hubspot: #ff5c34;
