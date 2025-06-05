@@ -20,11 +20,21 @@ const Chatbox = () => {
 
   const scrollToBottom = () => {
     setTimeout(() => {
-      bottomRef.current?.scrollIntoView({ 
-        behavior: "smooth",
-        block: "end",
-        inline: "nearest"
-      });
+      // More reliable iOS Safari scrolling
+      const scrollContainer = document.querySelector('.flex-1.overflow-y-scroll');
+      if (scrollContainer) {
+        // Force scroll to bottom using scrollTop
+        scrollContainer.scrollTop = scrollContainer.scrollHeight;
+      }
+      
+      // Fallback: try scrollIntoView as backup
+      if (bottomRef.current) {
+        bottomRef.current.scrollIntoView({ 
+          behavior: "auto", // Use "auto" instead of "smooth" for iOS
+          block: "end",
+          inline: "nearest"
+        });
+      }
     }, 100);
   };
 
