@@ -17,25 +17,42 @@ const Chatbox = () => {
   const [showResponse, setShowResponse] = useState(0);
 
   const bottomRef = useRef<HTMLDivElement | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToBottom = () => {
     setTimeout(() => {
-      // More reliable iOS Safari scrolling
-      const scrollContainer = document.querySelector('.flex-1.overflow-y-scroll');
-      if (scrollContainer) {
-        // Force scroll to bottom using scrollTop
-        scrollContainer.scrollTop = scrollContainer.scrollHeight;
+      // Try multiple approaches for maximum iOS Safari compatibility
+      
+      // Method 1: Direct parent container scroll
+      const parentContainer = bottomRef.current?.parentElement?.parentElement;
+      if (parentContainer) {
+        parentContainer.scrollTop = parentContainer.scrollHeight;
       }
       
-      // Fallback: try scrollIntoView as backup
-      if (bottomRef.current) {
-        bottomRef.current.scrollIntoView({ 
-          behavior: "auto", // Use "auto" instead of "smooth" for iOS
-          block: "end",
-          inline: "nearest"
-        });
+      // Method 2: Find scroll container by traversing up
+      let element = bottomRef.current?.parentElement;
+      while (element) {
+        if (element.classList.contains('overflow-y-scroll')) {
+          element.scrollTop = element.scrollHeight;
+          break;
+        }
+        element = element.parentElement;
       }
-    }, 100);
+      
+      // Method 3: Force scrollIntoView with different options for iOS
+      if (bottomRef.current) {
+        try {
+          bottomRef.current.scrollIntoView({ 
+            behavior: "auto",
+            block: "end",
+            inline: "nearest"
+          });
+        } catch (e) {
+          // If modern scrollIntoView fails, use basic version
+          bottomRef.current.scrollIntoView(false);
+        }
+      }
+    }, 150); // Slightly longer delay for iOS
   };
 
   useEffect(() => {
