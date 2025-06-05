@@ -21,9 +21,6 @@ const Messagebar = () => {
 
   const getResponse = async () => {
     try {
-      // const apiUrl = process.env.NODE_ENV === 'production' 
-      //   ? 'https://portfolio-api-olive-five.vercel.app/api/chat'
-      //   : '/api/chat';
       const apiUrl = 'https://portfolio-api-function.vercel.app/api/chat';
         
       const response = await fetch(apiUrl, {
