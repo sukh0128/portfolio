@@ -27,10 +27,20 @@ const Message = ({
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-                                .callFunction(() => scrollToBottom())
+                .callFunction(() => {
+                  // Multiple scroll attempts for iOS reliability
+                  scrollToBottom();
+                  setTimeout(() => scrollToBottom(), 100);
+                  setTimeout(() => scrollToBottom(), 300);
+                })
                 .typeString(msg)
                 .start()
-                .callFunction(() => scrollToBottom());
+                .callFunction(() => {
+                  // More aggressive final scroll for iOS
+                  setTimeout(() => scrollToBottom(), 100);
+                  setTimeout(() => scrollToBottom(), 300);
+                  setTimeout(() => scrollToBottom(), 500);
+                });
             }}
             options={{
               delay: 10,
