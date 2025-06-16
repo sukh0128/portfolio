@@ -31,8 +31,14 @@ html, body {
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Always use dark theme variables */
+  --hubspot: #ff5c34;
+  --dark: #141412;
+  --secondary: #4d4d4a;
+  --accent: #30302e;
+  --background: #262625;
+  --foreground: #fefefe;
+  --bg-image: url('/portfolio/bg.svg');
 }
 
 @theme inline {
@@ -46,20 +52,8 @@ html, body {
   --font-sans: var(--font-noto-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --hubspot: #ff5c34;
-    --dark: #141412;
-    --secondary: #4d4d4a;
-    --accent: #30302e;
-    --background: #262625;
-    --foreground: #fefefe;
-    --bg-image: url('/portfolio/bg.svg');
-  }
-}
-
 body {
-  background: black;
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-neuton), Arial, Helvetica, sans-serif;
 }
