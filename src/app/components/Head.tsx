@@ -66,8 +66,8 @@ const Head = () => {
             className="hover:border-hubspot border-2 border-accent transition hover:duration-300 ease-in-out  hidden sm:block bg-dark p-3 rounded-lg shadow-2xl"
           >
             <h2 className="flex items-center gap-1">
-              ↳ Software Engineer II @
-              <span className="text-yellow-400 font-bold">InComm</span>
+              ↳ Software Engineer @
+              <span className="text-yellow-400 font-bold">Amazon</span>
             </h2>
             <h2 className="flex items-center gap-1">
               ↳ Master of Science from
@@ -79,8 +79,8 @@ const Head = () => {
       {/* mobile version */}
       <div className="sm:hidden hover:border-hubspot border-2 border-accent transition hover:duration-300 ease-in-out bg-dark p-3 rounded-lg shadow-2xl">
         <h2 className="flex items-center gap-1">
-          ↳ Software Engineer II @
-          <span className="text-yellow-400 font-bold">InComm</span>
+          ↳ Software Engineer @
+          <span className="text-yellow-400 font-bold">Amazon</span>
         </h2>{" "}
         <h2 className="flex items-center gap-1">
           ↳ Master of Science from

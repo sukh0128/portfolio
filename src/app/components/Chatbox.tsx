@@ -90,7 +90,7 @@ const Chatbox = () => {
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        `Hello! I'm Eric Tsendjav. I am a Software Engineer II at InComm Payments in Denver, CO. I am a Master of Science in Information Technology from Minnesota State University, Mankato and I am pretty good at Data Structrues and Algorithms, System Design, and just being a software engineer!`
+                        `Hello! I'm Eric Tsendjav. I am a Software Engineer at Amazon in Denver, CO. I am a Master of Science in Information Technology from Minnesota State University, Mankato and I am pretty good at Data Structrues and Algorithms, System Design, and just being a software engineer!`
                       )
                       .start()
                       .callFunction(() => {
