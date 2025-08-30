@@ -139,8 +139,8 @@ const projectList = [
     detailedDescription:
       "A simple Flappy Bird style game made in Unity Engine using C# and XCode. The project is important to demonstrate the understanding of the Unity Engine and C# specifically for IOS platform development.",
     screenshots: [
-      "/portfolio/projects/flappymaddie1.png",
-      "/portfolio/projects/flappymaddie2.png"
+      "/portfolio/projects/flappymaddie1.PNG",
+      "/portfolio/projects/flappymaddie2.PNG"
     ],
     links: {
       github: "https://github.com/sukh0128/flappymaddie",
