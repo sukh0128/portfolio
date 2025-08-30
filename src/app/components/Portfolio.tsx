@@ -132,6 +132,21 @@ const projectList = [
       github: "https://github.com/sukh0128/CodeCrafters-HTTP-Server-Python"
     }
   },
+  {
+    title: "Flappy Maddie Unity IOS Game",
+    description:
+      "A simple Flappy Bird style game made in Unity Engine using C# and XCode. The project is important to demonstrate the understanding of the Unity Engine and C# specifically for IOS platform development.",
+    detailedDescription:
+      "A simple Flappy Bird style game made in Unity Engine using C# and XCode. The project is important to demonstrate the understanding of the Unity Engine and C# specifically for IOS platform development.",
+    screenshots: [
+      "/portfolio/projects/flappymaddie1.png",
+      "/portfolio/projects/flappymaddie2.png"
+    ],
+    links: {
+      github: "https://github.com/sukh0128/flappymaddie",
+      youtube: "https://www.youtube.com/watch?v=gz03SZwn730"
+    }
+  }
 ];
 
 const Portfolio = () => {
